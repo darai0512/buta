@@ -1,0 +1,33 @@
+{
+  "name": "buta",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "npm i --option --ignore-scripts",
+    "start": "node index",
+    "test": "npm run lint",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "@slack/client": "^4.1.0",
+    "issue-ctl": "^0.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 1
+    }
+  }
+}
